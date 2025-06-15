@@ -33,7 +33,7 @@ def regula_falsi(a,b, func, eps=1e-6, max_iter=10_000):
     return c
 
 # metoda siecznych
-def secant_method(x0,x1,func, eps=1e-12, max_iter = 10_000):
+def secant_method(x0,x1,func, eps=1e-6, max_iter = 10_000):
     for _ in range(max_iter):
         if abs(func(x1) - func(x0)) < eps:
             raise ZeroDivisionError("róznica pomiędzy func(x1) a func(x0) zbyt mała")
