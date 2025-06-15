@@ -46,8 +46,8 @@ def secant_method(x0,x1,func, eps=1e-6, max_iter = 10_000):
 # funkcja zarządzająca
 def run_methods():
     try:
-        a = float(entry_a.get().replace("pi", f"{math.pi}"))
-        b = float(entry_b.get().replace("pi", f"{math.pi}"))
+        a = eval(entry_a.get(), {"math": math})
+        b = eval(entry_b.get(), {"math": math})
         func_str = entry_func.get()
         func = lambda x: eval(func_str, {"x": x, "math": math})
 
