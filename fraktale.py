@@ -1,7 +1,5 @@
 # zadanie numeryczne 10
-
 import sys
-import numpy as np
 import math
 import random
 import pygame as pg
